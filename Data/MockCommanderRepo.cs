@@ -5,7 +5,17 @@ namespace Commander.Data
 {
     public class MockCommanderRepo : ICommanderRepo
     {
-        public IEnumerable<Command> GetAppCommands()
+        public void CreateCommand(Command command)
+        {
+            // nothing todo
+        }
+
+        public void DeleteCommand(Command command)
+        {
+            // nothing todo
+        }
+
+        public IEnumerable<Command> GetAllCommands()
         {
             var commands = new List<Command> {
                 new Command {
@@ -40,6 +50,16 @@ namespace Commander.Data
                 Line = "Boil water",
                 Platform = "Kettle & Pan"
             };
+        }
+
+        public bool SaveChanges()
+        {
+            return true;
+        }
+
+        public void UpdateCommand(Command command)
+        {
+            // nothing to do
         }
     }
 }
